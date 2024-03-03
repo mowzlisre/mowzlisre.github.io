@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mowzlisre.github.io/static/css/main.e7054bbb.css",
+    "main.js": "/mowzlisre.github.io/static/js/main.f73d6e16.js",
+    "static/js/453.906b0208.chunk.js": "/mowzlisre.github.io/static/js/453.906b0208.chunk.js",
+    "static/media/mowzlisre.jpg": "/mowzlisre.github.io/static/media/mowzlisre.387088564475723b0206.jpg",
+    "index.html": "/mowzlisre.github.io/index.html",
+    "main.e7054bbb.css.map": "/mowzlisre.github.io/static/css/main.e7054bbb.css.map",
+    "main.f73d6e16.js.map": "/mowzlisre.github.io/static/js/main.f73d6e16.js.map",
+    "453.906b0208.chunk.js.map": "/mowzlisre.github.io/static/js/453.906b0208.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e7054bbb.css",
+    "static/js/main.f73d6e16.js"
+  ]
+}

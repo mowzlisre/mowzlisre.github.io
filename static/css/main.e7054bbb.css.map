@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.e7054bbb.css","mappings":"AAAA,aAGI,wBAA4B,CAC5B,aAAa,CAFb,QAAS,CADT,SAIJ","sources":["index.css"],"sourcesContent":[".chrono-card{\n    padding: 0;\n    margin: 0;\n    background-color: blueviolet;\n    border: \"none\"\n}"],"names":[],"sourceRoot":""}
