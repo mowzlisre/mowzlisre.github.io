@@ -34,7 +34,7 @@ const data = {
         type: "Part-time",
         location: "Washington, DC, USA",
         bullets: [
-          "Evaluate SQL & MongoDB projects for 60+ undergrads; created auto-grading scripts in Python.",
+          "Prepare assignments, quizzes, and assessments aligned with course objectives to ensure effective learning outcomes.",
           "Redesigned course material to emphasise relational database design and hands-on labs."
         ],
         logo: gwLogo
@@ -46,8 +46,8 @@ const data = {
         type: "Part-time",
         location: "Washington, DC, USA",
         bullets: [
-          "Evaluate SQL & MongoDB projects for 60+ undergrads; created auto-grading scripts in Python.",
-          "Redesigned course material to emphasise relational database design and hands-on labs."
+          "Provided academic support for undergraduate and graduate students by holding regular office hours and one-on-one sessions to clarify course concepts and resolve doubts.",
+          "Collaborated with faculty to maintain alignment between instructional materials and course outcomes."
         ],
         logo: gwLogo
       },
@@ -69,7 +69,7 @@ const data = {
         role: "Intern – Full Stack Developer",
         company: "Skill Safari",
         dates: "Aug 2020 – Jun 2021",
-        type: "Part-time",
+        type: "Full-time",
         location: "Coimbatore, India",
         bullets: [
           "Built proprietary LMS with Django & React for student onboarding and tracking.",
