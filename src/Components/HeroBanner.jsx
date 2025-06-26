@@ -10,7 +10,7 @@ function HeroBanner() {
         <Box p="10" px={{base: "5", md: "5%"}} pb="0">
             <Text fontWeight={"350"} color={color}>Hi, I'm</Text>
             <Text my="4" fontSize={{base: "2xl", md: "6xl"}} fontWeight="bold">Mowzli Sre Mohan Dass</Text>
-            <Text textAlign={"justify"} fontWeight={"350"} color={color}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </Text>
+            <Text textAlign={"justify"} fontWeight={"350"} color={color}>I’m a builder at heart—with a background in software engineering and a graduate degree in data science—focused on crafting smart, user-first applications that bridge automation, design, and real-world impact. From transforming raw data into meaningful experiences to scaling end-to-end solutions, I thrive where creativity meets code.</Text>
             <Flex my="10" gap="5">
                 <NeonButton borderRadius={"full"}>
                     <Text my="auto" fontSize={{base: "sm", md: "sm"}} onClick={() => window.open("mailto:contact@mowzlisre.me")}>Say Hi 👋</Text>
