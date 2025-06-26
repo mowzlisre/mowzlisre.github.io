@@ -15,7 +15,6 @@ import tableau from "./src/assets/tableau.png";
 import neovsmongo from "./src/assets/neovsmongo.png";
 import fooddessert from "./src/assets/fooddessert.png";
 import nyctaxi from "./src/assets/nyctaxi.png";
-import { FaPython } from "react-icons/fa";
 
 const data = {
     contact: {
