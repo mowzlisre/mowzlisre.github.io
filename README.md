@@ -1,12 +1,62 @@
-# React + Vite
+# 💼 Personal Portfolio – Mowzli Sre Mohan Dass
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website built with **React** and **Chakra UI**, designed to showcase my projects, technical expertise, and professional journey in a clean, responsive, and minimal UI.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Responsive design with Chakra UI
+* Dark/light mode toggle
+* Modular React components
+* Interactive project showcase
+* Optimized for performance and accessibility
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend**: React (Vite) + Chakra UI
+* **Styling**: CSS-in-JS via Chakra UI
+* **Deployment**: GitHub Pages (or custom domain)
+* **Assets**: React Icons, custom illustrations in Figma
+
+## 🚀 Getting Started
+
+1. **Clone the repo**
+
+   ```bash
+   git clone https://github.com/mowzlisre/mowzlisre.github.io.git
+   cd mowzlisre.github.io
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+
+   ```bash
+   npm run build
+   ```
+
+## 🌐 Hosting
+
+This site is deployed using **GitHub Pages** and linked to my [custom domain](https://mowzlisre.me).
+
+If you're using a custom domain:
+
+* Ensure your domain is configured with the correct **A records** or **CNAME**
+* Update the `vite.config.js` and create/update the `CNAME` file with your domain name
+
+## 📢 Contact
+
+Feel free to reach out or connect!
+
+* **Email**: [contact@mowzlisre.me](mailto:contact@mowzlisre.me)
+* **LinkedIn**: [linkedin.com/in/mowzlisre](https://linkedin.com/in/mowzlisre)
+* **GitHub**: [github.com/mowzlisre](https://github.com/mowzlisre)
