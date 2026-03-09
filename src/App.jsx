@@ -1,61 +1,96 @@
-import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
-import Navbar from "./Components/Navbar"
-import HeroBanner from "./Components/HeroBanner"
-import Wave1 from "./Components/Waves/Wave1"
-import Footer from "./Components/Footer"
-import Experience from "./Components/Experience/Experience"
-import Wave2 from "./Components/Waves/Wave2"
-import Education from "./Components/Education/Education"
-import Wave3 from "./Components/Waves/Wave3"
-import Wave4 from "./Components/Waves/Wave4"
-import Projects from "./Components/Projects/Projects"
-import Wave5 from "./Components/Waves/Wave5"
-import Skills from "./Components/Skills/Skills"
+import { Box, Flex, useColorMode } from "@chakra-ui/react";
+import Navbar from "./Components/Navbar";
+import HeroBanner from "./Components/HeroBanner";
+import Footer from "./Components/Footer";
+import Experience from "./Components/Experience/Experience";
+import Education from "./Components/Education/Education";
+import Projects from "./Components/Projects/Projects";
+import Skills from "./Components/Skills/Skills";
+
+const SectionDivider = ({ isDark, flip = false }) => (
+  <Box
+    h="100px"
+    bgGradient={
+      flip
+        ? isDark
+          ? "linear(to-b, #111, #000)"
+          : "linear(to-b, #f5f5f5, #fff)"
+        : isDark
+          ? "linear(to-b, #000, #111)"
+          : "linear(to-b, #fff, #f5f5f5)"
+    }
+    pointerEvents="none"
+  />
+);
 
 function App() {
-  const bgColor = useColorModeValue('#000', '#fff')
-  const bgInvColor = useColorModeValue('#fff', '#000')
+  const { colorMode } = useColorMode();
+  const isDark = colorMode === "dark";
+
+  const bg1 = isDark ? "#000" : "#fff";
+  const bg2 = isDark ? "#111" : "#f5f5f5";
 
   return (
-    <Box bg={bgColor} minH="100vh">
-      <Flex width="100%" bg={bgInvColor}>
-        <Flex bg={bgInvColor} direction={"column"} width={{base: "100%", md: "70%"}} mx="auto" px={{base: "5", md: "5%"}}>
+    <Box bg={bg1} minH="100vh">
+      {/* Navbar — floating over hero */}
+      <Box position="fixed" top={0} left={0} right={0} zIndex={100}
+        backdropFilter="blur(12px)"
+        borderBottom="1px solid"
+        borderColor={isDark ? "rgba(255,255,255,0.06)" : "rgba(0,0,0,0.06)"}
+        bg={isDark ? "rgba(0,0,0,0.7)" : "rgba(255,255,255,0.7)"}
+      >
+        <Box maxW="900px" mx="auto">
           <Navbar />
-          <HeroBanner />
-        </Flex>
-      </Flex>
-      <Wave1 />
-      <Flex id={"experience"} width="100%" bg={bgColor}>
-        <Flex bg={bgColor} direction={"column"} width={{base: "100%", md: "70%"}} mx="auto" px={{base: "5", md: "5%"}}>
+        </Box>
+      </Box>
+
+      {/* Hero */}
+      <HeroBanner />
+
+      <SectionDivider isDark={isDark} />
+
+      {/* Experience */}
+      <Box id="experience" bg={bg2} py={16}>
+        <Box maxW="900px" mx="auto" px={{ base: 5, md: "5%" }}>
           <Experience />
-        </Flex>
-      </Flex>
-      <Wave2 />
-      <Flex id={"education"} width="100%" bg={bgInvColor}>
-        <Flex bg={bgInvColor} direction={"column"} width={{base: "100%", md: "70%"}} mx="auto" px={{base: "5", md: "5%"}}>
+        </Box>
+      </Box>
+
+      <SectionDivider isDark={isDark} flip />
+
+      {/* Education */}
+      <Box id="education" bg={bg1} py={16}>
+        <Box maxW="900px" mx="auto" px={{ base: 5, md: "5%" }}>
           <Education />
-        </Flex>
-      </Flex>
-      <Wave3 />
-      <Flex id={"projects"} width="100%" bg={bgColor}>
-        <Flex bg={bgColor} direction={"column"} width={{base: "100%", md: "70%"}} mx="auto" px={{base: "5", md: "5%"}}>
+        </Box>
+      </Box>
+
+      <SectionDivider isDark={isDark} />
+
+      {/* Projects */}
+      <Box id="projects" bg={bg2} py={16}>
+        <Box maxW="900px" mx="auto" px={{ base: 5, md: "5%" }}>
           <Projects />
-        </Flex>
-      </Flex>
-      <Wave4 />
-      <Flex width="100%" bg={bgInvColor}>
-        <Flex bg={bgInvColor} direction={"column"} width={{base: "100%", md: "70%"}} mx="auto" px={{base: "5", md: "5%"}}>
+        </Box>
+      </Box>
+
+      <SectionDivider isDark={isDark} flip />
+
+      {/* Skills */}
+      <Box bg={bg1} py={16}>
+        <Box maxW="900px" mx="auto" px={{ base: 5, md: "5%" }}>
           <Skills />
-        </Flex>
-      </Flex>
-      <Wave5 />
-      <Flex width="100%" bg={bgColor}>
-        <Flex bg={bgColor} direction={"column"} width={"100%"} mx="auto">
-          <Footer />
-        </Flex>
-      </Flex>
+        </Box>
+      </Box>
+
+      <SectionDivider isDark={isDark} />
+
+      {/* Footer */}
+      <Box bg={bg2}>
+        <Footer />
+      </Box>
     </Box>
-  )
+  );
 }
 
 export default App;
