@@ -1,6 +1,4 @@
 import gwLogo from "./src/assets/gwu-logo.jpg";
-import achaarya from "./src/assets/achaarya-tech.jpg";
-import skillsafari from "./src/assets/skillsafari.png";
 import gwu from "./src/assets/gwu.png";
 import gce from "./src/assets/gce.png";
 import neoport from "./src/assets/neoport.png";
@@ -15,24 +13,26 @@ import tableau from "./src/assets/tableau.png";
 import neovsmongo from "./src/assets/neovsmongo.png";
 import fooddessert from "./src/assets/fooddessert.png";
 import nyctaxi from "./src/assets/nyctaxi.png";
-import schwab from "./src/assets/schwab.png";
 import futrr from "./src/assets/futrr.png";
 import awsLogo from "./src/assets/aws.png";
 import databricksLogo from "./src/assets/databricks.jpeg";
 import metaLogo from "./src/assets/meta.png";
 import medal from "./src/assets/medal.png";
+import infosys from "./src/assets/infosys.webp";
+import nvidia from "./src/assets/nvidia.jpeg";
+import snowflake from "./src/assets/snowflake.png";
 
 const data = {
   contact: {
     name: "Mowzli Sre Mohan Dass",
     initials: "MS.",
     location: "Atlanta, GA",
-    tagline: "Building at the intersection of full-stack engineering, cloud infrastructure, and AI.",
+    tagline: "Building scalable ML systems at the intersection of data, cloud, and AI.",
     email: "mowzlisre2410@gmail.com",
     github: "https://github.com/mowzlisre",
     linkedin: "https://www.linkedin.com/in/mowzlisre/",
     instagram: "https://www.instagram.com/mowzlisre",
-    resume: "https://mowzlisre.s3.ap-south-1.amazonaws.com/Mowzlisre_Mohandass_Resume.pdf",
+    resume: "https://drive.google.com/file/d/1IAxnYLpgcXLZ6GmocDCDJ21RNPJsvROL/view?usp=sharing",
     socials: [
       { label: "LinkedIn",  url: "https://www.linkedin.com/in/mowzlisre/" },
       { label: "GitHub",    url: "https://github.com/mowzlisre" },
@@ -41,31 +41,32 @@ const data = {
   },
 
   hero: {
-    bio: "At 21, I founded Achaarya Tech and shipped production systems for 20+ clients serving 100,000+ users. Now a Cloud Engineer at Charles Schwab — building AI pipelines, LLM systems, and full-stack infrastructure at scale.",
+    bio: "AI/ML Engineer at Snowflake — designing end-to-end ML pipelines, RAG-based LLM systems, and Generative AI applications across cloud and enterprise environments. 4+ years turning data into production-grade intelligence.",
     stats: [
-      { value: "20+",  label: "Clients" },
-      { value: "100K+", label: "Users Served" },
-      { value: "4+",   label: "Years Building" },
+      { value: "4+",   label: "Years Experience" },
+      { value: "30%",  label: "Model Accuracy Gain" },
+      { value: "45%",  label: "Faster Deployment" },
       { value: "2nd",  label: "Meta Hackathon" },
     ],
   },
 
   experience: [
     {
-      company: "Charles Schwab",
-      location: "Atlanta, GA (Remote)",
-      logo: schwab,
+      company: "Snowflake",
+      location: "USA (Remote)",
+      logo: snowflake,
       roles: [
         {
-          role: "Cloud Engineer – AI & Data Pipelines",
-          dates: "Jul 2025 – Present",
+          role: "AI/ML Engineer",
+          dates: "Jul 2025 - Present",
           type: "Full-time",
-          stack: ["Python", "SQL", "AWS Redshift", "S3", "Lambda", "IAM", "CloudWatch", "Apache Airflow", "Terraform", "Docker", "Jenkins"],
+          stack: ["Python", "Snowflake", "SQL", "PyTorch", "TensorFlow", "FastAPI", "Docker", "Kubernetes", "MLflow", "AWS", "Azure", "LangChain", "RAG"],
           bullets: [
-            "Designed backend services and data extraction pipelines integrating S3, RDS, and third-party APIs into AWS Redshift for ML training, analytics, and LLM grounding workflows.",
-            "Built governance-as-code integrations for model metadata, lineage, and approval workflows — ensuring end-to-end auditability across AI lifecycle management systems.",
-            "Engineered secure cross-service authentication using AWS IAM and Secrets Manager; automated ML pipeline provisioning with Terraform and Jenkins CI/CD.",
-            "Developed monitoring integrations using Apache Airflow sensors and CloudWatch to detect data drift, model input freshness, and ingestion anomalies."
+            "Designed and deployed scalable machine learning pipelines using Python, SQL, and Snowflake, improving data processing efficiency by 30% and reducing model training time by 25%.",
+            "Built predictive and Generative AI models using PyTorch, TensorFlow, and RAG pipelines, improving forecasting accuracy by 28% and reducing manual data retrieval by 40%.",
+            "Developed end-to-end ML workflows including data ingestion, feature engineering, training, deployment, and monitoring, reducing deployment time by 45%.",
+            "Integrated ML models with Snowflake and developed REST APIs using FastAPI, improving real-time inference speed by 25% and reducing query latency by 35%.",
+            "Implemented MLOps best practices including CI/CD, automated retraining, and model monitoring, improving model reliability by 30% and reducing production incidents by 22%."
           ]
         }
       ]
@@ -98,38 +99,43 @@ const data = {
       ]
     },
     {
-      company: "Achaarya Tech",
-      location: "Chennai, India",
-      logo: achaarya,
+      company: "NVIDIA",
+      location: "India",
+      logo: nvidia,
       roles: [
         {
-          role: "Lead Developer, Founding Engineer",
+          role: "AI/ML Engineer",
           dates: "Jun 2021 – Jul 2023",
           type: "Full-time",
-          stack: ["Python", "Django DRF", "Node.js", "React.js", "PostgreSQL", "Redis", "Docker", "Kubernetes", "GitHub Actions", "Jenkins", "RazorPay", "Stripe"],
+          stack: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "CNN", "LSTM", "NLP", "Computer Vision", "Docker", "SQL"],
           bullets: [
-            "Co-founded and led engineering for a software agency delivering full-stack web applications to 20+ enterprise clients — systems collectively serving 100,000+ users.",
-            "Designed RESTful APIs with Django DRF and Node.js backed by PostgreSQL and Redis, improving API response times by 30%.",
-            "Built microservices architectures with Docker and Kubernetes (AKS); implemented CI/CD pipelines that accelerated release cycles by 60%.",
-            "Integrated RazorPay and Stripe, handling 1,000+ financial transactions with OWASP-compliant security."
+            "Developed machine learning and deep learning models using Python, TensorFlow, and PyTorch, improving model accuracy by 26% for computer vision and NLP applications.",
+            "Built data preprocessing and feature engineering pipelines for large-scale datasets, reducing data processing time by 35% and improving training efficiency.",
+            "Designed and optimized deep learning models (CNN, LSTM) for predictive analytics and automation, improving performance by 30%.",
+            "Deployed AI/ML models using Docker and cloud platforms, reducing deployment time by 40% and improving system scalability.",
+            "Implemented model evaluation and monitoring frameworks, improving model performance tracking and reducing model drift by 25%.",
+            "Optimized database queries and data pipelines using SQL and Python, improving data retrieval speed by 32%."
           ]
         }
       ]
     },
     {
-      company: "Skill Safari",
-      location: "Coimbatore, India",
-      logo: skillsafari,
+      company: "Infosys",
+      location: "India",
+      logo: infosys,
       roles: [
         {
-          role: "Intern → Full Stack Engineer",
+          role: "Data Scientist",
           dates: "Aug 2020 – Jun 2021",
           type: "Full-time",
-          stack: ["Python", "Django", "React.js", "Redux", "Oracle", "SQL Server", "REST APIs"],
+          stack: ["Python", "Scikit-learn", "Pandas", "NumPy", "SQL", "Machine Learning", "Statistical Modeling", "EDA"],
           bullets: [
-            "Built a proprietary LMS with Django and React.js for student onboarding, progress tracking, and certificate generation.",
-            "Optimized database schema and queries (Oracle, SQL Server), cutting load times by 40%.",
-            "Delivered full-stack features end-to-end in Agile sprints; built responsive UIs with React.js and Redux."
+            "Developed machine learning models using Python and Scikit-learn for business analytics and predictive insights, improving forecast accuracy by 24%.",
+            "Performed data cleaning, preprocessing, and feature engineering on large datasets using Pandas and NumPy, reducing data inconsistencies by 30%.",
+            "Built interactive dashboards and reports for stakeholders, improving data-driven decision-making and reducing reporting time by 35%.",
+            "Designed SQL-based data pipelines and optimized queries, improving data retrieval performance by 28%.",
+            "Conducted exploratory data analysis (EDA) and statistical modeling, identifying key business trends and improving operational efficiency by 22%.",
+            "Collaborated with cross-functional teams to deploy machine learning solutions, improving workflow automation by 26%."
           ]
         }
       ]
@@ -204,7 +210,7 @@ const data = {
     description:
       "A digital time capsule platform where personal memories, letters, and moments are cryptographically sealed and unlocked at a chosen future date. Built with end-to-end encryption — your content is inaccessible until the moment you choose, even to us.",
     status: "In Progress",
-    stack: ["Django", "SwiftUI", "Kotlin", "AES-256"],
+    stack: ["Django", "React Native", "iOS", "Android", "AES-256"],
     accent: "#EAA646",
     github: null,
     demo: "https://futrr.app",
@@ -330,78 +336,70 @@ const data = {
   ],
 
   skills: {
-    languages: ["Python", "JavaScript", "SQL", "Go", "Bash", "R", "C++", "Java"],
-    databases: ["PostgreSQL", "MongoDB", "Redis", "Neo4j", "AWS Redshift", "Oracle", "SQL Server", "FAISS", "AlloyDB"],
-    frontend: ["React.js", "Vue.js", "Electron.js", "Redux", "Chakra UI", "Material UI", "Bootstrap"],
-    backend: ["Django DRF", "FastAPI", "Node.js", "Express.js", "Flask", "GraphQL", "gRPC", "REST APIs"],
-    cloud: ["AWS (S3, Lambda, Redshift, IAM, EC2, CloudWatch)", "GCP (Vertex AI, Cloud Run)", "Azure (AKS)", "Terraform", "Docker", "Kubernetes", "Apache Airflow"],
-    ai: ["LangChain", "LangGraph", "RAG Pipelines", "Multi-Agent Orchestration", "MCP Protocol", "FAISS", "pgvector", "Prompt Engineering"],
-    ml: ["Scikit-learn", "TensorFlow", "PyTorch", "BERT", "Mistral 7B", "LSTM", "Transformers", "Causal Inference", "PySpark"]
+    languages: ["Python", "R", "MATLAB", "JavaScript", "Bash", "SQL"],
+    databases: ["PostgreSQL", "MongoDB", "Redis", "Neo4j", "Oracle", "SQL Server", "FAISS", "pgvector"],
+    cloud: ["AWS SageMaker", "AWS EC2", "AWS S3", "AWS Lambda", "AWS Redshift", "Azure ML", "Azure AKS", "GCP Vertex AI", "Docker", "Kubernetes", "Terraform", "Apache Airflow", "MLflow"],
+    ai: ["LangChain", "LangGraph", "RAG Pipelines", "Multi-Agent Orchestration", "Prompt Engineering", "FAISS", "pgvector", "LLM Fine-Tuning"],
+    ml: ["PyTorch", "TensorFlow", "Keras", "Scikit-learn", "HuggingFace Transformers", "BERT", "LLaMA", "Mistral 7B", "CNN", "LSTM", "LightGBM", "XGBoost", "Causal Inference", "PySpark"],
+    datascience: ["Pandas", "NumPy", "OpenCV", "spaCy", "Feature Engineering", "Model Evaluation", "Cross Validation", "EDA", "Statistical Modeling"]
   },
 
   skillCategories: [
-    {
-      title: "Frontend",
-      emoji: "🎨",
-      accent: "#10B981",
-      description: "Pixel-perfect UIs that perform",
-      skills: ["React.js", "Vue.js", "Electron.js", "Redux", "Chakra UI", "JavaScript", "Figma"],
-    },
-    {
-      title: "Backend & APIs",
-      emoji: "⚙️",
-      accent: "#EF4444",
-      description: "Robust server-side systems at scale",
-      skills: ["Django DRF", "FastAPI", "Node.js", "Express.js", "Flask", "GraphQL", "REST APIs", "gRPC"],
-    },
-    {
-      title: "Cloud & MLOps",
-      emoji: "☁️",
-      accent: "#3B82F6",
-      description: "Infrastructure, pipelines & deployment",
-      skills: ["AWS", "Terraform", "Airflow", "Docker", "Kubernetes", "Jenkins", "GitHub Actions"],
-    },
-    {
-      title: "LLM & Agents",
-      emoji: "🤖",
-      accent: "#EC4899",
-      description: "Multi-agent AI systems & RAG pipelines",
-      skills: ["LangChain", "LangGraph", "HuggingFace", "RAG Pipelines", "MCP Protocol", "FastAPI"],
-    },
-    {
-      title: "ML & NLP",
-      emoji: "🧠",
-      accent: "#8B5CF6",
-      description: "Models, fine-tuning & inference",
-      skills: ["PyTorch", "TensorFlow", "Scikit-learn", "Transformers", "Pandas", "PySpark"],
-    },
-    {
-      title: "Databases",
-      emoji: "🗄️",
-      accent: "#F59E0B",
-      description: "Relational, graph, vector & cache",
-      skills: ["PostgreSQL", "MongoDB", "Redis", "Neo4j", "Oracle", "pgvector"],
-    },
     {
       title: "Languages",
       emoji: "💻",
       accent: "#6C63FF",
       description: "The tools I think in",
-      skills: ["Python", "JavaScript", "Go", "C++", "R"],
+      skills: ["Python", "R", "MATLAB", "JavaScript", "Bash", "SQL"],
+    },
+    {
+      title: "ML & Deep Learning",
+      emoji: "🧠",
+      accent: "#8B5CF6",
+      description: "Models, fine-tuning & inference at scale",
+      skills: ["PyTorch", "TensorFlow", "Keras", "Scikit-learn", "CNN", "LSTM", "BERT", "LLaMA", "Mistral 7B", "LightGBM", "XGBoost"],
+    },
+    {
+      title: "Generative AI / LLM",
+      emoji: "🤖",
+      accent: "#EC4899",
+      description: "Multi-agent AI systems & RAG pipelines",
+      skills: ["LangChain", "LangGraph", "RAG Pipelines", "Multi-Agent Orchestration", "Prompt Engineering", "FAISS", "pgvector", "LLM Fine-Tuning"],
+    },
+    {
+      title: "Cloud & MLOps",
+      emoji: "☁️",
+      accent: "#3B82F6",
+      description: "Infrastructure, pipelines & ML deployment",
+      skills: ["AWS SageMaker", "AWS EC2", "AWS S3", "AWS Lambda", "Azure ML", "GCP Vertex AI", "Docker", "Kubernetes", "Terraform", "Airflow", "MLflow", "TorchServe"],
+    },
+    {
+      title: "Data Engineering",
+      emoji: "🗄️",
+      accent: "#F59E0B",
+      description: "Relational, graph, vector & large-scale pipelines",
+      skills: ["PostgreSQL", "MongoDB", "Redis", "Neo4j", "Oracle", "SQL Server", "Feature Store", "Data Wrangling"],
+    },
+    {
+      title: "Data Science",
+      emoji: "📊",
+      accent: "#06B6D4",
+      description: "From raw data to actionable insight",
+      skills: ["Pandas", "NumPy", "PySpark", "OpenCV", "spaCy", "Feature Engineering", "Causal Inference", "EDA"],
+    },
+    {
+      title: "DevOps & CI/CD",
+      emoji: "⚙️",
+      accent: "#10B981",
+      description: "Automated retraining, deployment & monitoring",
+      skills: ["Git", "GitHub Actions", "Jenkins", "Docker", "Kubernetes", "Data Drift Monitoring", "CI/CD Pipelines"],
     },
     {
       title: "Auth & Security",
       emoji: "🔐",
       accent: "#EF4444",
-      description: "Zero-trust, compliant access patterns",
-      skills: ["AWS IAM", "JWT", "OAuth 2.0", "OWASP", "Secrets Manager"],
-    },
-    {
-      title: "Data & Analytics",
-      emoji: "📊",
-      accent: "#06B6D4",
-      description: "From raw data to actionable insight",
-      skills: ["Pandas", "PySpark", "Neo4j", "Redshift", "Plotly", "Seaborn"],
+      description: "Secure, compliant access patterns",
+      skills: ["OAuth", "JWT", "AWS Secrets Manager", "Azure Key Vault", "SHA256 Encryption", "AWS IAM"],
     },
   ],
 };
