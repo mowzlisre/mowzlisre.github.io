@@ -145,7 +145,7 @@ function Footer() {
             onClick={() => window.open("/resume.pdf", "_blank")}
           >
             <HiDownload size={14} color={ACCENT} />
-            <Text fontSize="xs" fontWeight="600" color={ACCENT} onClick={() => window.open("https://mowzlisre.s3.ap-south-1.amazonaws.com/Mowzlisre_Mohandass_Resume.pdf", "__blank")}>
+            <Text fontSize="xs" fontWeight="600" color={ACCENT} onClick={() => window.open(data.contact.resume, "_blank")}>
               Download Résumé
             </Text>
           </Flex>

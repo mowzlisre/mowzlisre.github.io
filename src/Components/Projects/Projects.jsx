@@ -154,6 +154,7 @@ const SmallCard = ({ project, index, isDark }) => {
                     transition="all 0.2s"
                     bg={hovered ? project.accent + "18" : "transparent"}
                     cursor="pointer"
+                    onClick={() => window.open(project.open, "_blank")} 
                 >
                     <FaArrowRight size={8} color={hovered ? project.accent : mutedColor} />
                 </Box>
@@ -170,7 +171,7 @@ function Projects() {
     const cardBg = isDark ? "rgba(255,255,255,0.03)" : "rgba(0,0,0,0.02)";
     const cardBorder = isDark ? "rgba(255,255,255,0.07)" : "rgba(0,0,0,0.07)";
     const mutedColor = isDark ? "rgba(255,255,255,0.38)" : "rgba(0,0,0,0.38)";
-    const ACCENT = data.featured.accent;
+    const ACCENT = data.featured[0].accent;
 
     return (
         <Box w="100%">
@@ -200,218 +201,219 @@ function Projects() {
             </Flex>
 
             <Box px={{ base: 5, lg: 0 }}>
-                {/* Featured Card — Futrr */}
-                <Box
-                    bg={cardBg}
-                    border="1px solid"
-                    borderColor={cardBorder}
-                    borderRadius="2xl"
-                    overflow="hidden"
-                    mb={4}
-                    animation={`${fadeUp} 0.5s ease both`}
-                    role="group"
-                    position="relative"
-                    transition="all 0.35s cubic-bezier(0.4,0,0.2,1)"
-                    _hover={{
-                        borderColor: ACCENT + "55",
-                        boxShadow: `0 32px 64px ${ACCENT}16`,
-                    }}
-                    sx={{ animation: `${pulseGlow} 4s ease-in-out infinite` }}
-                >
-                    {/* Top accent line */}
-                    <Box
-                        position="absolute"
-                        top={0} left={0} right={0}
-                        h="2px"
-                        bgGradient={`linear(to-r, transparent, ${ACCENT}, transparent)`}
-                    />
+                {/* Featured Cards */}
+                {data.featured.map((featured) => {
+                    const A = featured.accent;
+                    return (
+                        <Box
+                            key={featured.name}
+                            bg={cardBg}
+                            border="1px solid"
+                            borderColor={cardBorder}
+                            borderRadius="2xl"
+                            overflow="hidden"
+                            mb={4}
+                            animation={`${fadeUp} 0.5s ease both`}
+                            role="group"
+                            position="relative"
+                            transition="all 0.35s cubic-bezier(0.4,0,0.2,1)"
+                            _hover={{
+                                borderColor: A + "55",
+                                boxShadow: `0 32px 64px ${A}16`,
+                            }}
+                            sx={{ animation: `${pulseGlow} 4s ease-in-out infinite` }}
+                        >
+                            {/* Top accent line */}
+                            <Box
+                                position="absolute"
+                                top={0} left={0} right={0}
+                                h="2px"
+                                bgGradient={`linear(to-r, transparent, ${A}, transparent)`}
+                            />
 
-                    {/* Background mesh */}
-                    <Box
-                        position="absolute"
-                        top="-60px" right="-60px"
-                        w="300px" h="300px"
-                        borderRadius="full"
-                        bg={ACCENT}
-                        opacity={isDark ? 0.06 : 0.04}
-                        filter="blur(80px)"
-                        transition="opacity 0.4s"
-                        _groupHover={{ opacity: isDark ? 0.14 : 0.08 }}
-                        pointerEvents="none"
-                    />
-                    <Box
-                        position="absolute"
-                        bottom="-40px" left="20%"
-                        w="200px" h="200px"
-                        borderRadius="full"
-                        bg="#EC4899"
-                        opacity={isDark ? 0.04 : 0.03}
-                        filter="blur(60px)"
-                        pointerEvents="none"
-                    />
+                            {/* Background mesh */}
+                            <Box
+                                position="absolute"
+                                top="-60px" right="-60px"
+                                w="300px" h="300px"
+                                borderRadius="full"
+                                bg={A}
+                                opacity={isDark ? 0.06 : 0.04}
+                                filter="blur(80px)"
+                                transition="opacity 0.4s"
+                                _groupHover={{ opacity: isDark ? 0.14 : 0.08 }}
+                                pointerEvents="none"
+                            />
+                            <Box
+                                position="absolute"
+                                bottom="-40px" left="20%"
+                                w="200px" h="200px"
+                                borderRadius="full"
+                                bg="#EC4899"
+                                opacity={isDark ? 0.04 : 0.03}
+                                filter="blur(60px)"
+                                pointerEvents="none"
+                            />
 
-                    <Flex
-                        direction={{ base: "column", md: "row" }}
-                        align={{ base: "flex-start", md: "center" }}
-                        gap={6}
-                        p={{ base: 6, md: 8 }}
-                    >
-                        {/* Left — text */}
-                        <Box flex={1} position="relative" zIndex={1}>
-                            {/* Status badge */}
-                            <Flex align="center" gap={2} mb={4}>
+                            <Flex
+                                direction={{ base: "column", md: "row" }}
+                                align={{ base: "flex-start", md: "center" }}
+                                gap={6}
+                                p={{ base: 6, md: 8 }}
+                            >
+                                {/* Left — text */}
+                                <Box flex={1} position="relative" zIndex={1}>
+                                    {/* Status badge */}
+                                    <Flex align="center" gap={2} mb={4}>
+                                        <Box
+                                            w="6px" h="6px"
+                                            borderRadius="full"
+                                            bg="#10B981"
+                                            boxShadow="0 0 8px #10B98188"
+                                            sx={{ animation: `${pulseGlow} 2s ease-in-out infinite` }}
+                                        />
+                                        <Text fontSize="2xs" fontWeight="600" color="#10B981" letterSpacing="0.08em" textTransform="uppercase">
+                                            {featured.status}
+                                        </Text>
+                                        <Box
+                                            px={2} py={0.5}
+                                            borderRadius="full"
+                                            border="1px solid"
+                                            borderColor={A + "44"}
+                                            bg={A + "12"}
+                                            ml={1}
+                                        >
+                                            <Text fontSize="2xs" fontWeight="600" color={A}>Featured</Text>
+                                        </Box>
+                                    </Flex>
+
+                                    {/* Name */}
+                                    <Flex align="center" gap={2} mb={2}>
+                                        <Image src={featured.logo} w="50px" h="50px" objectFit="contain" borderRadius={12} mr={3} />
+                                        <Text
+                                            fontSize={{ base: "3xl", md: "4xl" }}
+                                            fontWeight="800"
+                                            color={titleColor}
+                                            letterSpacing="-0.04em"
+                                            lineHeight={1}
+                                            mb={2}
+                                            my={"auto"}
+                                        >
+                                            {featured.name}
+                                        </Text>
+                                    </Flex>
+
+                                    {/* Tagline */}
+                                    <Text
+                                        fontSize={{ base: "sm", md: "md" }}
+                                        color={A}
+                                        fontWeight="500"
+                                        mb={4}
+                                        opacity={0.8}
+                                    >
+                                        {featured.tagline}
+                                    </Text>
+
+                                    {/* Description */}
+                                    <Text
+                                        fontSize="sm"
+                                        color={mutedColor}
+                                        lineHeight="1.8"
+                                        maxW="520px"
+                                        mb={6}
+                                    >
+                                        {featured.description}
+                                    </Text>
+
+                                    {/* Stack pills */}
+                                    <Flex gap={2} wrap="wrap" mb={6}>
+                                        {featured.stack.map((tech, i) => (
+                                            <Box
+                                                key={i}
+                                                px={3} py={1}
+                                                borderRadius="full"
+                                                border="1px solid"
+                                                borderColor={A + "44"}
+                                                bg={A + "10"}
+                                            >
+                                                <Text fontSize="2xs" fontWeight="600" color={A}>{tech}</Text>
+                                            </Box>
+                                        ))}
+                                    </Flex>
+                                </Box>
+
+                                {/* Right — visual */}
                                 <Box
-                                    w="6px" h="6px"
-                                    borderRadius="full"
-                                    bg="#10B981"
-                                    boxShadow="0 0 8px #10B98188"
-                                    sx={{
-                                        animation: `${pulseGlow} 2s ease-in-out infinite`,
-                                    }}
-                                />
-                                <Text fontSize="2xs" fontWeight="600" color="#10B981" letterSpacing="0.08em" textTransform="uppercase">
-                                    {data.featured.status}
-                                </Text>
-                                <Box
-                                    px={2} py={0.5}
-                                    borderRadius="full"
+                                    flexShrink={0}
+                                    w={{ base: "100%", md: "220px" }}
+                                    h={{ base: "160px", md: "220px" }}
+                                    borderRadius="2xl"
                                     border="1px solid"
-                                    borderColor={ACCENT + "44"}
-                                    bg={ACCENT + "12"}
-                                    ml={1}
+                                    borderColor={A + "33"}
+                                    bg={isDark ? `${A}0f` : `${A}08`}
+                                    display="flex"
+                                    flexDirection="column"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                    gap={3}
+                                    position="relative"
+                                    overflow="hidden"
                                 >
-                                    <Text fontSize="2xs" fontWeight="600" color={ACCENT}>Featured</Text>
+                                    <Box
+                                        w="64px" h="64px"
+                                        borderRadius="2xl"
+                                        bg={A + "18"}
+                                        border="1px solid"
+                                        borderColor={A + "44"}
+                                        display="flex"
+                                        alignItems="center"
+                                        justifyContent="center"
+                                    >
+                                        <FaLock size={28} color={A} />
+                                    </Box>
+
+                                    <Text fontSize="xs" color={A} fontWeight="600" opacity={0.7}>
+                                        {featured.visualLabel}
+                                    </Text>
+
+                                    {featured.demo && (
+                                        <Flex
+                                            align="center"
+                                            gap={1.5}
+                                            px={3} py={1.5}
+                                            borderRadius="full"
+                                            border="1px solid"
+                                            borderColor={A + "55"}
+                                            bg={A + "12"}
+                                            cursor="pointer"
+                                            transition="all 0.2s"
+                                            _hover={{ bg: A + "28", borderColor: A + "99" }}
+                                            onClick={() => window.open(featured.demo, "_blank")}
+                                        >
+                                            <FaExternalLinkAlt size={9} color={A} />
+                                            <Text fontSize="2xs" fontWeight="600" color={A}>
+                                                Visit Site
+                                            </Text>
+                                        </Flex>
+                                    )}
+
+                                    {[...Array(3)].map((_, i) => (
+                                        <Box
+                                            key={i}
+                                            position="absolute"
+                                            w="4px" h="4px"
+                                            borderRadius="full"
+                                            bg={A}
+                                            opacity={0.2 + i * 0.1}
+                                            top={`${20 + i ** 2 * 30}%`}
+                                            right={`${10 + i * 8}%`}
+                                        />
+                                    ))}
                                 </Box>
                             </Flex>
-
-                            {/* Name */}
-                            <Flex align="center" gap={2} mb={2}>
-                                <Image src={data.featured.logo} w="50px" h="50px" objectFit="contain" borderRadius={12} mr={3} />
-                                <Text
-                                    fontSize={{ base: "3xl", md: "4xl" }}
-                                    fontWeight="800"
-                                    color={titleColor}
-                                    letterSpacing="-0.04em"
-                                    lineHeight={1}
-                                    mb={2}
-                                    my={"auto"}
-                                >
-                                    {data.featured.name}
-                                </Text>
-                            </Flex>
-
-                            {/* Tagline */}
-                            <Text
-                                fontSize={{ base: "sm", md: "md" }}
-                                color={ACCENT}
-                                fontWeight="500"
-                                mb={4}
-                                opacity={0.8}
-                            >
-                                {data.featured.tagline}
-                            </Text>
-
-                            {/* Description */}
-                            <Text
-                                fontSize="sm"
-                                color={mutedColor}
-                                lineHeight="1.8"
-                                maxW="520px"
-                                mb={6}
-                            >
-                                {data.featured.description}
-                            </Text>
-
-                            {/* Stack pills */}
-                            <Flex gap={2} wrap="wrap" mb={6}>
-                                {data.featured.stack.map((tech, i) => (
-                                    <Box
-                                        key={i}
-                                        px={3} py={1}
-                                        borderRadius="full"
-                                        border="1px solid"
-                                        borderColor={ACCENT + "44"}
-                                        bg={ACCENT + "10"}
-                                    >
-                                        <Text fontSize="2xs" fontWeight="600" color={ACCENT}>{tech}</Text>
-                                    </Box>
-                                ))}
-                            </Flex>
-
                         </Box>
-
-                        {/* Right — visual */}
-                        {/* Right — visual */}
-                        <Box
-                            flexShrink={0}
-                            w={{ base: "100%", md: "220px" }}
-                            h={{ base: "160px", md: "220px" }}
-                            borderRadius="2xl"
-                            border="1px solid"
-                            borderColor={ACCENT + "33"}
-                            bg={isDark ? "rgba(108,99,255,0.06)" : "rgba(108,99,255,0.04)"}
-                            display="flex"
-                            flexDirection="column"
-                            alignItems="center"
-                            justifyContent="center"
-                            gap={3}
-                            position="relative"
-                            overflow="hidden"
-                        >
-                            {/* Decorative lock */}
-                            <Box
-                                w="64px" h="64px"
-                                borderRadius="2xl"
-                                bg={ACCENT + "18"}
-                                border="1px solid"
-                                borderColor={ACCENT + "44"}
-                                display="flex"
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                <FaLock size={28} color={ACCENT} />
-                            </Box>
-
-                            <Text fontSize="xs" color={ACCENT} fontWeight="600" opacity={0.7}>
-                                Sealed until opened
-                            </Text>
-
-                            {/* Visit site button */}
-                            <Flex
-                                align="center"
-                                gap={1.5}
-                                px={3} py={1.5}
-                                borderRadius="full"
-                                border="1px solid"
-                                borderColor={ACCENT + "55"}
-                                bg={ACCENT + "12"}
-                                cursor="pointer"
-                                transition="all 0.2s"
-                                _hover={{ bg: ACCENT + "28", borderColor: ACCENT + "99" }}
-                                onClick={() => window.open(data.featured.demo, "_blank")}
-                            >
-                                <FaExternalLinkAlt size={9} color={ACCENT} />
-                                <Text fontSize="2xs" fontWeight="600" color={ACCENT}>
-                                    Visit Site
-                                </Text>
-                            </Flex>
-
-                            {/* Decorative dots */}
-                            {[...Array(3)].map((_, i) => (
-                                <Box
-                                    key={i}
-                                    position="absolute"
-                                    w="4px" h="4px"
-                                    borderRadius="full"
-                                    bg={ACCENT}
-                                    opacity={0.2 + i * 0.1}
-                                    top={`${20 + i ** 2 * 30}%`}
-                                    right={`${10 + i * 8}%`}
-                                />
-                            ))}
-                        </Box>
-                    </Flex>
-                </Box>
+                    );
+                })}
 
                 {/* Other Projects Grid */}
                 <Box

@@ -9,11 +9,11 @@ import taxonomy from "./src/assets/taxonomy.png";
 import xray from "./src/assets/xray.png";
 import next from "./src/assets/next.png";
 import timeseries from "./src/assets/timeseries.png";
-import tableau from "./src/assets/tableau.png";
 import neovsmongo from "./src/assets/neovsmongo.png";
 import fooddessert from "./src/assets/fooddessert.png";
 import nyctaxi from "./src/assets/nyctaxi.png";
 import futrr from "./src/assets/futrr.png";
+import cloudable from "./src/assets/cloudable.png";
 import awsLogo from "./src/assets/aws.png";
 import databricksLogo from "./src/assets/databricks.jpeg";
 import metaLogo from "./src/assets/meta.png";
@@ -204,20 +204,33 @@ const data = {
     },
   ],
 
-  featured: {
-    name: "Futrr",
-    tagline: "Lock today. Unlock the future.",
-    description:
-      "A digital time capsule platform where personal memories, letters, and moments are cryptographically sealed and unlocked at a chosen future date. Built with end-to-end encryption — your content is inaccessible until the moment you choose, even to us.",
-    status: "In Progress",
-    stack: ["Django", "React Native", "iOS", "Android", "AES-256"],
-    accent: "#EAA646",
-    github: null,
-    demo: "https://futrr.app",
-    logo: futrr,
-  },
+  featured: [
+    {
+      name: "Futrr",
+      tagline: "Lock today. Unlock the future.",
+      description:
+        "A digital time capsule platform where personal memories, letters, and moments are cryptographically sealed and unlocked at a chosen future date. Built with end-to-end encryption — your content is inaccessible until the moment you choose, even to us.",
+      status: "In Progress",
+      stack: ["Django", "React Native", "iOS", "Android", "AES-256"],
+      accent: "#EAA646",
+      github: null,
+      demo: "https://futrr.app",
+      logo: futrr,
+      visualLabel: "Sealed until opened",
+    }
+  ],
 
   projects: [
+    {
+      name: "Cloudable",
+      type: "Open Source",
+      logo: cloudable,
+      accent: "#da274b",
+      description: "A cost intelligence desktop app built for cloud engineers and teams who need real visibility into their infrastructure spend. Tracks resource usage, flags cost anomalies, and surfaces hygiene issues across AWS, Azure, and GCP — all from a single native interface.",
+      stack: ["Electron.js", "React.js", "express.js", "aws-sdk"],
+      github: "https://github.com/mowzlisre/cloudable",
+      open: "https://cloudable.mowzlisre.me",
+    },
     {
       name: "NeXT Mission",
       type: "Hackathon",
@@ -294,16 +307,6 @@ const data = {
       description: "Scalable time series forecasting pipeline using PySpark for distributed preprocessing and LSTM models for multi-step ahead predictions on large sensor datasets.",
       stack: ["Python", "PySpark", "TensorFlow", "LSTM", "Pandas"],
       demo: "https://docs.google.com/document/d/e/2PACX-1vRHacpQ8xD6ot4YuELjYQvRVznfEwMXEF4msKb68zOTg5gCx0sYDdai6oW4OvNmlw/pub"
-    },
-    {
-      name: "Tableau Visualization",
-      type: "Academic",
-      logo: tableau,
-      accent: "#10B981",
-      description: "Interactive Tableau dashboards analyzing public health and socioeconomic datasets, surfacing trends across demographics with drill-down filters and KPI summaries.",
-      stack: ["Tableau", "SQL", "Excel"],
-      github: null,
-      demo: null
     },
     {
       name: "Neo4j vs MongoDB",
